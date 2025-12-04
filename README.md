@@ -59,8 +59,8 @@ https://github.com/Unity-Technologies/ROS-TCP-Connector
 2. Complete the setup steps described in:  
 https://github.com/Unity-Technologies/Unity-Robotics-Hub/blob/main/tutorials/ros_unity_integration/setup.md
 
-3. Run **hostname -I** to learn your IP adress and use it for the following (Use your IP address)
-   **ros2 run ros_tcp_endpoint default_server_endpoint --ros-args -p ROS_IP:=<your IP address> -p ROS_TCP_PORT:=11000**
+3. Run `hostname -I` to learn your IP adress and use it for the following (Use your IP address)
+   `ros2 run ros_tcp_endpoint default_server_endpoint --ros-args -p ROS_IP:=<your IP address> -p ROS_TCP_PORT:=11000`
 
 4. ROS2, IP address and port number should match in Unity as well. If all works you will see blue bilateral arrows on left top corner of game screen with your ROS2 IP displayed.
 
