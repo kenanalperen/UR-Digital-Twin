@@ -68,6 +68,26 @@ https://github.com/Unity-Technologies/Unity-Robotics-Hub/blob/main/tutorials/ros
  
 ## 4. Controlling the Robot via ROS
 
+Firstly in unity side, attach "RobotPositionController.cs", "SimpleRosControl.cs", and "SimplePositionPublisher.cs" codes to the robot game object. You can also add a red circle image game object to the end effector to highlight.
+
+Secondly, use mouse_simple.py to publish your mouse position and ros_tcp_endpoint to connect to unity from terminal
+
+I have created alias for both of them in .bashrc so it is easier to run 
+
+alias unity_ros='ros2 run ros_tcp_endpoint default_server_endpoint --ros-args -p ROS_IP:=164.11.236.21 -p ROS_TCP_PORT:=11000'
+
+alias unity_mouse='ros2 run unity_robot_control mouse_simple'
+
 ---
 
 ## 5. Touchscreen UI Adjustments
+
+Run the python script red_circle_cursor.py directly (ne need for ros) to add the UI elements. Pressing "r" reveals the rectangle and pressing "S" reveals sine wave path. Pressin the same key makes them dissappear.
+
+~/unity_ws$ python3 red_circle_cursor.py 
+
+---
+## 6. Control using Joystick
+Run the python script joystick_control.py directly (ne need for ros) to control the mouse position using the left side of the joystick. Pressing LT or RT increases the speed of mouse during control
+
+~/unity_ws$ python3 joystick_control.py
